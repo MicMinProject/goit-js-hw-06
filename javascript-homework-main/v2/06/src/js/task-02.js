@@ -10,15 +10,17 @@ const ingredients = [
   'Condiments',
 ];
 
-const makeList=document.createElement('ul');
-makeList.setAttribute('class','ingredients');
+const list=document.querySelector('#ingredients')
 
 const ingredientsList = ingredients.forEach(ingredient=>{
   const listing=document.createElement('li');
-  makeList.append(listing);
+  list.append(listing);
   listing.textContent=ingredient;
-  return listing.setAttribute('class','item');
+  listing.setAttribute('class','item');
+  
 })
 
-console.log(makeList)
+
+
+
 
